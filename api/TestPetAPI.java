@@ -1,9 +1,7 @@
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
-
 import org.testng.annotations.Test;
-
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -28,7 +26,7 @@ public class TestPetAPI {
 
         // Assertions
         response.then().statusCode(200);
-        response.then().body("[0].status", equalTo("sold"));
+        response.then().body("[1].status", equalTo("sold"));
     }
 
 }
